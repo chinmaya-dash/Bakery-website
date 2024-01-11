@@ -10,8 +10,9 @@
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap">
+  <!-- cdn for reviewslide -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- css -->
   <link rel="stylesheet" href="style.css">
   <title>Bakery</title>
@@ -172,12 +173,14 @@
 
   <!-- menu section -->
 
+    <!-- review section -->
+
   <section class="review" id="reviews">
     <div id="header">
       <h1>Customer's Review</h1>
-    </div>
+      </div><br>
     <div class="revcontainer">
-      <div class="confl">
+      <div class="showrSlide fade">
         <div class="profilepic">
           <img src="" alt="invalid">
         </div>
@@ -197,21 +200,156 @@
           <span class="material-icons star">
             star_purple500
           </span>
-        </div>
-      </div>
-      <p id="name">chinmaya</p>
+        </div> 
+        <p id="name">chinmaya dash</p>
 
       <p> This is a great place and a must try place for biscuits and cakes. they have a variety of biscuit and cookie
         flavours to choose from. Their fruit biscuits are my favourite and their red velvet chocolate cake .
       </p>
+
+      <div class="content">Slide1 heading</div>
+        </div>
+      </div>
+
+      <div class="showrSlide fade">
+        <div class="profilepic">
+          <img src="" alt="invalid">
+        </div>
+        <div class="flexb_star">
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star_purple500
+          </span>
+        </div> 
+        <p id="name">chinmaya dash</p>
+
+      <p> This is a great place and a must try place for biscuits and cakes. they have a variety of biscuit and cookie
+        flavours to choose from. Their fruit biscuits are my favourite and their red velvet chocolate cake .
+      </p>
+
+      <div class="content">Slide2 heading</div>
+        </div>
+      </div>
+
+      <div class="showrSlide fade">
+        <div class="profilepic">
+          <img src="" alt="invalid">
+        </div>
+        <div class="flexb_star">
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star_purple500
+          </span>
+        </div> 
+        <p id="name">chinmaya dash</p>
+
+      <p> This is a great place and a must try place for biscuits and cakes. they have a variety of biscuit and cookie
+        flavours to choose from. Their fruit biscuits are my favourite and their red velvet chocolate cake .
+      </p>
+
+      <div class="content">Slide3 heading</div>
+        </div>
+      </div>
+
+      <div class="showrSlide fade">
+        <div class="profilepic">
+          <img src="" alt="invalid">
+        </div>
+        <div class="flexb_star">
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star_purple500
+          </span>
+        </div> 
+        <p id="name">chinmaya dash</p>
+
+      <p> This is a great place and a must try place for biscuits and cakes. they have a variety of biscuit and cookie
+        flavours to choose from. Their fruit biscuits are my favourite and their red velvet chocolate cake .
+      </p>
+
+      <div class="content">Slide3 heading</div>
+        </div>
+      </div>
+
+      <div class="showrSlide fade">
+        <div class="profilepic">
+          <img src="" alt="invalid">
+        </div>
+        <div class="flexb_star">
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star_purple500
+          </span>
+        </div> 
+        <p id="name">chinmaya dash</p>
+
+      <p> This is a great place and a must try place for biscuits and cakes. they have a variety of biscuit and cookie
+        flavours to choose from. Their fruit biscuits are my favourite and their red velvet chocolate cake .
+      </p>
+
+      <div class="content">Slide4 heading</div>
+        </div>
+      </div>
+       <!-- Navigation arrows -->
+       <a class="left" onclick="nextSlide(-1)">?</a>
+       <a class="right" onclick="nextSlide(1)">?</a>
+     
+      
+
     </div>
+
+    
   </section>
 
   <section id="">contact us</section>
   <section>
 
 
-
+    reviewslideshow-container
 
     <!-- Footer -->
     <footer class="bakerymanagementsystem">
@@ -226,6 +364,9 @@
       </p>
     </footer>
     <script src="main.js" type="module"></script>
+    <!-- <-- review slide--> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </body>
 

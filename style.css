@@ -393,7 +393,7 @@ padding-bottom: 0.5rem;
 .revcontainer{
     width: 30rem;
     height: fit-content;
-    background: rgb(232, 162, 130);
+    background: rgb(241, 183, 155);
     position: relative;
     padding: 2.5rem 2rem;
     border-radius: 0.5rem;
@@ -422,3 +422,74 @@ padding-bottom: 0.5rem;
 .star{
     color: rgb(255, 196, 0);
 }
+
+/* review slider */
+
+/* .showrSlide {
+    display: none
+} */
+    .showSlide img {
+        width: 100%;
+    }
+.revcontainer {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.left, .right {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.right {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+    .left:hover, .right:hover {
+        background-color: rgba(115, 115, 115, 0.8);
+    }
+.content {
+    color: #eff5d4;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+}
+.active {
+    background-color: #717171;
+}
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+/* review slider */
