@@ -13,7 +13,9 @@ const display = bitems.map((item, index) => {
 <p>${item.title}</p>
 <p></p>
 <p>${item.price}</p>
-<button id="btn">Add to cart</button>
+<div class="btn">
+<button id="btn" >Add to cart</button>
+</div>
 </div>
 `
 })

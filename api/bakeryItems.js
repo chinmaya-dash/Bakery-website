@@ -28,7 +28,7 @@ export const bakeryItems = [
     },
     {
       id: "4",
-      img: "./src/doughnut.jpg",
+      img: "./src/doughnot.jpg",
       title: "Doughnut",
       description: "Soft and sweet doughnuts with various toppings.",
       price: "$1.50",
@@ -37,7 +37,7 @@ export const bakeryItems = [
     },
     {
       id: "5",
-      img: "./src/apple-pie.jpg",
+      img: "./src/applepie.jpg",
       title: "Apple Pie",
       description: "Classic apple pie with a buttery crust.",
       price: "$4.50",
@@ -100,7 +100,7 @@ export const bakeryItems = [
     },
     {
       id: "12",
-      img: "./src/.jpg",
+      img: "./src/Red-Velvet-Cake.jpg",
       title: "Blueberry Muffin",
       description: "Moist and fruity muffins with blueberries.",
       price: "$2.25",
