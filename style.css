@@ -1003,7 +1003,7 @@ header{
 .carttab .cartbtn.close{
     background-color: #e1e2e4;
 }
-.carttab.listcart.cards{
+.carttab.listcart.cards.title{
     width:100%;
     display: grid;
     grid-template-columns: 70px 150px 50px 1fr;
