@@ -839,13 +839,16 @@ textarea.contact-input ~ icon{
     grid-template-columns: repeat(2,1fr);
     overflow: hidden;
     pointer-events: none;
+    /* background-image: url("./src/contactus.jpg");
+    background-size: cover; */
+
 }
 .image-wrapper{
     position: relative;
     grid-column: 2;
 }
 .image-wrapper.img{
-    position: relative;
+    position: absolute;
     height: 130%;
     left: 60%;
     top: 50%;
