@@ -78,7 +78,7 @@ const testimonialsData = [
     name: "jane pit",
     rating: 4, 
     review: "This is a great place and a must-try for biscuits and cakes. The ambiance is cozy, and the staff is friendly.",
-    img: "jane.jpg", 
+    img: "C:\Users\Lenovo\Desktop\developement\Bakery-website\src\jane.jpg", 
   },
   {
     id: 2,
@@ -146,3 +146,16 @@ const viewreview = testimonialsData.map((item, index) => {
 });
 
 reviewdiv.innerHTML = viewreview.join("");
+
+// contact page
+const inputs =document.querySelectorall(".contact-input");
+
+inputs.forEach((ipt) => {
+  ipt.addEventlistner("focus",()=>{
+  ipt.parentnode.classList.add("focous");
+  ipt.parentnode.classList.add("not-empty");
+});
+ipt.addEventlistner("blur",()=>{
+  ipt.parentnode.classList.remove("focous");
+})
+});
