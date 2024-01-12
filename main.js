@@ -78,42 +78,42 @@ const testimonialsData = [
     name: "jane pit",
     rating: 4, 
     review: "This is a great place and a must-try for biscuits and cakes. The ambiance is cozy, and the staff is friendly.",
-    img: "C:\Users\Lenovo\Desktop\developement\Bakery-website\src\jane.jpg", 
+    img: "./src/jane.jpg", 
   },
   {
     id: 2,
     name: "John Doe",
     rating: 5,
     review: "I had an amazing experience at this place. The food was delicious, and the service was impeccable.",
-    img: "johndoe.jpg",
+    img: "./src/johndoe.jpg",
   },
   {
     id: 3,
     name: "Jane Smith",
     rating: 3,
     review: "The atmosphere was pleasant, but the food quality could be improved. It's an average experience overall.",
-    img: "janesmith.jpg",
+    img: "./src/janesmith.jpg",
   },
   {
     id: 4,
     name: "Sam Johnson",
     rating: 4,
     review: "Visited with friends and enjoyed every moment. The staff was accommodating, and the menu had a variety of options.",
-    img: "sam.jpg",
+    img: "./src/sam.jpg",
   },
   {
     id: 5,
     name: "Emily White",
     rating: 2,
     review: "Not satisfied with the products. The taste was below expectations, and the prices were on the higher side.",
-    img: "emily.jpg",
+    img: "./src/emily.jpg",
   },
   {
     id: 6,
     name: "Alex Green",
     rating: 5,
     review: "Had a wonderful time at this place. The food was top-notch, and the atmosphere was perfect for a relaxing evening.",
-    img: "alex.jpg",
+    img: "./src/alex.jpg",
   }
 ];
 
