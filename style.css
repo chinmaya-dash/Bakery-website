@@ -562,8 +562,8 @@ padding: 0rem 4rem;
     background-color: rgba(115, 115, 115, 0.8);
 }
 .imgdivw{
-    width: 70%;
-    height: 60%;
+    width: 850%;
+    height: 79%;
     /* background: red; */
     overflow: hidden;
     object-fit: cover;
@@ -952,3 +952,62 @@ textarea.contact-input ~ icon{
     margin: 10px;
 }
 /* Contact us section */
+
+
+
+
+
+/* shoping cart section */
+
+
+/* .cartcontainer{
+    width: 900px;
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+} */
+.carttab{
+    width: 400px;
+    background-color: #000;
+    color:#e1e2e4;
+    /* position: fixed; */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    inset: 0 0 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+}
+.carttab h2{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+.carttab.cartbtn{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.carttab .cartbtn button{
+    background-color: #e8bc0e;border: none;
+    font-family:poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.carttab .cartbtn.close{
+    background-color: #e1e2e4;
+}
+.carttab.listcart.cards{
+    width:100%;
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+}
+
+/* shoping cart section */

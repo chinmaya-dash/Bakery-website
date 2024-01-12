@@ -159,3 +159,55 @@ ipt.addEventlistner("blur",()=>{
   ipt.parentnode.classList.remove("focous");
 })
 });
+
+
+// // cart logic
+
+
+// const cardct = document.querySelector(".cards");
+// const cart = [];
+
+// // Function to handle the "Add to Cart" button click
+// function addToCart(index) {
+//     const selectedItem = bitems[index];
+
+//     // Check if the item is already in the cart
+//     const existingItem = cart.find(item => item.title === selectedItem.title);
+
+//     if (existingItem) {
+//         // If the item is already in the cart, increase the quantity
+//         existingItem.quantity++;
+//     } else {
+//         // If the item is not in the cart, add it with a quantity of 1
+//         cart.push({ ...selectedItem, quantity: 1 });
+//     }
+
+//     // Update the cart display
+//     updateCartDisplay();
+// }
+
+// // Function to update the cart display
+// function updateCartDisplay() {
+//     // Add your logic here to update the cart display
+//     // For now, let's log the current cart array to the console
+//     console.log("Cart:", cart);
+// }
+
+// const display = bitems.map((item, index) => {
+//     return `
+//     <div class="card">
+//         <div class="img">
+//             <img src="${item.img}" alt="">
+//         </div>
+//         <p>${item.rate}<span>(${item.reviews})</span></p>
+//         <p>${item.title}</p>
+//         <p>${item.price}</p>
+//         <div class="btn">
+//             <button onclick="addToCart(${index})">Add to Cart</button>
+//         </div>
+//     </div>
+//     `;
+// });
+
+// cardct.innerHTML = display.join("");
+
