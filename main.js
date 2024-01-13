@@ -4,7 +4,7 @@ const bakeryItems = [
     img: "./src/croissant.jpg",
     title: "Croissant",
     description: "A flaky and buttery French pastry.",
-    price: "$2.50",
+    price: 345, // Changed from "$2.50" to 345
     rate: 4.5,
     reviews: 56,
   },
@@ -13,7 +13,7 @@ const bakeryItems = [
     img: "./src/baguette.jpg",
     title: "Baguette",
     description: "A classic French bread with a crispy crust.",
-    price: "$3.00",
+    price: 345, // Changed from "$3.00" to 345
     rate: 4.0,
     reviews: 42,
   },
@@ -22,7 +22,7 @@ const bakeryItems = [
     img: "./src/cupcake.jpg",
     title: "Cupcake",
     description: "Delicious cupcakes in various flavors.",
-    price: "$2.00",
+    price: 345, // Changed from "$2.00" to 345
     rate: 4.8,
     reviews: 65,
   },
@@ -31,7 +31,7 @@ const bakeryItems = [
     img: "./src/doughnot.jpg",
     title: "Doughnut",
     description: "Soft and sweet doughnuts with various toppings.",
-    price: "$1.50",
+    price: 345, // Changed from "$1.50" to 345
     rate: 4.2,
     reviews: 38,
   },
@@ -40,7 +40,7 @@ const bakeryItems = [
     img: "./src/applepie.jpg",
     title: "Apple Pie",
     description: "Classic apple pie with a buttery crust.",
-    price: "$4.50",
+    price: 345, // Changed from "$4.50" to 345
     rate: 4.7,
     reviews: 50,
   },
@@ -49,7 +49,7 @@ const bakeryItems = [
     img: "./src/cinnamon-roll.jpg",
     title: "Cinnamon Roll",
     description: "Warm and gooey cinnamon rolls with icing.",
-    price: "$2.75",
+    price: 345, // Changed from "$2.75" to 345
     rate: 4.6,
     reviews: 60,
   },
@@ -58,7 +58,7 @@ const bakeryItems = [
     img: "./src/danish-pastry.jpg",
     title: "Danish Pastry",
     description: "Layers of flaky pastry with sweet fillings.",
-    price: "$3.25",
+    price: 345, // Changed from "$3.25" to 345
     rate: 4.4,
     reviews: 48,
   },
@@ -67,7 +67,7 @@ const bakeryItems = [
     img: "./src/chocolate-cake.jpg",
     title: "Chocolate Cake",
     description: "Rich and moist chocolate cake for chocolate lovers.",
-    price: "$5.00",
+    price: 345, // Changed from "$5.00" to 345
     rate: 4.9,
     reviews: 70,
   },
@@ -76,7 +76,7 @@ const bakeryItems = [
     img: "./src/sourdough-bread.jpg",
     title: "Sourdough Bread",
     description: "Artisanal sourdough bread with a chewy crust.",
-    price: "$3.50",
+    price: 345, // Changed from "$3.50" to 345
     rate: 4.3,
     reviews: 55,
   },
@@ -85,7 +85,7 @@ const bakeryItems = [
     img: "./src/blueberry-muffin.jpg",
     title: "Blueberry Muffin",
     description: "Moist and fruity muffins with blueberries.",
-    price: "$2.25",
+    price: 345, // Changed from "$2.25" to 345
     rate: 4.7,
     reviews: 52,
   },
@@ -94,7 +94,7 @@ const bakeryItems = [
     img: "./src/pie.jpg",
     title: "Banana Pie",
     description: "Moist and fruity muffins with blueberries.",
-    price: "$2.25",
+    price: 345, // Changed from "$2.25" to 345
     rate: 4.7,
     reviews: 52,
   },
@@ -103,11 +103,12 @@ const bakeryItems = [
     img: "./src/Red-Velvet-Cake.jpg",
     title: "Blueberry Muffin",
     description: "Moist and fruity muffins with blueberries.",
-    price: "$2.25",
+    price: 345, // Changed from "$2.25" to 345
     rate: 4.7,
     reviews: 52,
   },
 ];
+
 
 let cart = [];
 // console.log("Script loaded");
@@ -129,7 +130,7 @@ const display = bitems.map((item, index) => {
 <p>${item.rate}<span>(${item.reviews})</span></p>
 <p>${item.title}</p>
 <p></p>
-<p>${item.price}</p>
+<p><i class="uil uil-rupee-sign"></i> ${item.price}</p>
 <div class="btn">
 <button onclick="addToCart(${index})" id="btn" >Add to cart</button>
 </div>
@@ -296,6 +297,11 @@ function addToCart(index) {
 // Function to update the cart display
 function updateCartDisplay() {
   const cardShopping = document.querySelector(".itemwraper");
+  const totalPriceElement = document.querySelector("#totalPrice");
+
+  // Calculate the total price
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+console.log(total);
   const shop = cart.map((item, index) => {
     return `
     <div class="itemcov">
@@ -311,6 +317,9 @@ function updateCartDisplay() {
   });
 
   cardShopping.innerHTML = shop.join("");
+  // Update the total price display
+  totalPriceElement.innerHTML = `<i class="uil uil-rupee-sign"></i> ${total}`;
+
 
   // Add click event listener to the "remove" buttons
   const removeButtons = document.querySelectorAll(".removeit");
@@ -350,3 +359,7 @@ function updatenum() {
   const cartno =document.querySelector(".num");
   cartno.innerText=cart.length;
 }
+
+
+const totalPriceElement = document.querySelector("#totalPrice");
+totalPriceElement.innerHTML = `<i class="uil uil-rupee-sign"></i> 0`;

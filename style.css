@@ -1031,21 +1031,25 @@ header{
 }
 .chk{
     /* background: red; */
+    /* border: red solid; */
     width: 100%;
-    height: 100%;
+    height: 91%;
     overflow: hidden;
     z-index: 99;
 }
 .carit{
     /* background: rgb(162, 255, 0); */
     /* width: 100%; */
-    height: 70%;
+    height: 90%;
     overflow-y: scroll;
 }
 .tot{
-    background: rgb(51, 0, 255);
+    background: rgb(57, 57, 57);
     /* width: 100%; */
-    height: 30%;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .itemcov{
     background: orange;
@@ -1063,4 +1067,16 @@ header{
     position: absolute;
     right: 1rem;
     top: 1rem;
+}
+.textci{
+    color: white;
+    
+}
+.textci p:nth-child(1){
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding-bottom: 0.3rem;
+}
+.buttonci{
+
 }
