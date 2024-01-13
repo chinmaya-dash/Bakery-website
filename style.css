@@ -657,21 +657,7 @@ padding: 0rem 4rem;
     box-sizing: border-box;
 }
 
-/* yout-1 {
-    padding-top: 70px; 
-   padding-top: 75.lapx;
-    color: #111111;
-    background-color: #ffffff;
-}
-    
 
-.u-align-center {
-    text-align: center;
-}
-.u-valign-middle, .u-valign-top, .u-valign-bottom {
-    display: flex;
-    flex-direction: column;
-} */
 .contact{
     width: 100%;
     overflow: hidden;
@@ -690,9 +676,9 @@ padding: 0rem 4rem;
 
 }
 
-.contact-heading h1{
-    font-weight: 600;
-    color: #21e8fa;
+.contact-heading h3{
+    font-weight:300;
+    color: #000000;
     font-size: 3.5rem;
     line-height: 0.9;
     white-space: nowrap;
@@ -779,56 +765,6 @@ textarea.contact-input ~ icon{
     top:0.75rem;
     transform: translateY(0);
 }
-.btnupload{
-    position: relative;
-    display: flex;
-     justify-content: center;
-    align-items: center;
-     border: 1px solid #3498db;
-    background: none;
-    padding: 10px 20px;
-    border-radius: 27px;
-    font-size: 20px;
-    cursor: pointer;
-    margin: 10px;
-    color: #21e8fa;
-    transition: 0.5s;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 0 5px cyan,0 0 25px cyan;
-
-}
-.btn.upload span{
-    color: var(--light-text-color);
-}
-.btn.upload:hover{
-    box-shadow: 0 0 5px cyan,0 0 2.5px cyan,0 0 5px cyan,0 0 10px cyan,0 0 20px cyan;
-    transform: translate(-2px,-2px);
-}
-.btnupload::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 180%;
-    background: #3498db;
-    z-index: -1;
-    transition: 0.5s;
-    bottom: 0;
-
-    border: radius 27px;
-}
-
-.btn.upload input{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    background-color: royalblue;
-    opacity: 0;
-}
 
 .image-wrapper{
     position: relative;
@@ -860,7 +796,7 @@ textarea.contact-input ~ icon{
     font-size: 20px;
     cursor: pointer;
     margin: 10px;
-    color: #21e8fa;
+    color: #000000;
     transition: 0.5s;
     position: relative;
     overflow: hidden;
@@ -889,54 +825,10 @@ textarea.contact-input ~ icon{
     display: flex;
 }
 
-/* CSS */
-/* .contactbtn {
-  align-items: center;
-  background-color: #fee6e3;
-  border: 2px solid #111;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #111;
-  cursor: pointer;
-  display: flex;
-  font-family: Inter,sans-serif;
-  font-size: 16px;
-  height: 48px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
-  padding: 0 25px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
 
-.contactbtn:after {
-  background-color: #111;
-  border-radius: 8px;
-  content: "";
-  display: block;
-  height: 48px;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  top: -2px;
-  transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
-  z-index: -1;
-}
 
-.contactbtn:hover:after {
-  transform: translate(0, 0);
-}
 
-.contactbtn:active {
-  background-color: #ffdeda;
-  outline: 0;
-}
+
 
 .button-56:hover {
   outline: 0;
@@ -946,7 +838,7 @@ textarea.contact-input ~ icon{
   .contactbtn {
     padding: 0 40px;
   }
-} */
+} 
 .contactname{
     border-radius: 27px;
     margin: 10px;
@@ -1003,6 +895,7 @@ header{
 .carttab .cartbtn.close{
     background-color: #e1e2e4;
 }
+
 .carttab.listcart.cards.title{
     width:100%;
     display: grid;
