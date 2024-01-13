@@ -125,7 +125,7 @@ const display = bitems.map((item, index) => {
   return `
     <div class="card">
 <div class="img">
-<img src="${item.img}" alt="">
+<img class="reviewimage" src="${item.img}" alt="">
 </div>
 <p>${item.rate}<span>(${item.reviews})</span></p>
 <p>${item.title}</p>
