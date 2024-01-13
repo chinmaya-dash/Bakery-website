@@ -46,30 +46,39 @@
 
     <div class="cartcontainer">
       <header>
-        <div><i class="uil uil-search"></i>
-            <i class="uil uil-shopping-cart-alt"></i>
-           <span class="num">10</span>
-      </div>
+        <div class="opencart" onclick="open_c()">
+          <button class="uil uil-shopping-cart-alt"></button>
+          <span class="num">0</span>
+        </div>
     </div>
-<!-- cor listcart -->
-<div class="carttab">
-  <h2>Shopping Cart</h2>
-  <div class="listcart">
-    <div class="">
-      <div class="image">
-        <img src="">
-      </div>
-    </div>
-  </div>
-  <div class="cartbtn">
-    <button class="close">CLOSE</button>
-    <button class="checkout">CHECK OUT</button>
-  </div>
-</header>
-</div>
+    <!-- cor listcart -->
+    <div class="viewcart_div">
+      <div id="header">
+        <h1 id="cartshop">Shopping Cart</h1>
+      </div><br>
+      <div class="chk">
+        <div class="carit">
+          <!-- items wraper -->
+          <button onclick="close_c()" id="close">close</button>
+          <div class="itemwraper">
+            <!-- list item -->
 
-   
-      
+            <!--  -->
+          </div>
+
+
+
+
+
+
+        </div>
+        <div class="tot">
+          <!-- total price -->
+        </div>
+      </div>
+    </div>
+
+
 
   </nav>
   <!-- nav bar section -->
@@ -416,7 +425,7 @@
         Bakery</a>
     </p>
   </footer>
-  <script src="main.js" type="module"></script>
+  <script src="main.js"></script>
   <!-- <-- review slide-->
 
 

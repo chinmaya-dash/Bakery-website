@@ -1,10 +1,127 @@
-import * as card from "./api/bakeryItems.js";
+const bakeryItems = [
+  {
+    id: "1",
+    img: "./src/croissant.jpg",
+    title: "Croissant",
+    description: "A flaky and buttery French pastry.",
+    price: "$2.50",
+    rate: 4.5,
+    reviews: 56,
+  },
+  {
+    id: "2",
+    img: "./src/baguette.jpg",
+    title: "Baguette",
+    description: "A classic French bread with a crispy crust.",
+    price: "$3.00",
+    rate: 4.0,
+    reviews: 42,
+  },
+  {
+    id: "3",
+    img: "./src/cupcake.jpg",
+    title: "Cupcake",
+    description: "Delicious cupcakes in various flavors.",
+    price: "$2.00",
+    rate: 4.8,
+    reviews: 65,
+  },
+  {
+    id: "4",
+    img: "./src/doughnot.jpg",
+    title: "Doughnut",
+    description: "Soft and sweet doughnuts with various toppings.",
+    price: "$1.50",
+    rate: 4.2,
+    reviews: 38,
+  },
+  {
+    id: "5",
+    img: "./src/applepie.jpg",
+    title: "Apple Pie",
+    description: "Classic apple pie with a buttery crust.",
+    price: "$4.50",
+    rate: 4.7,
+    reviews: 50,
+  },
+  {
+    id: "6",
+    img: "./src/cinnamon-roll.jpg",
+    title: "Cinnamon Roll",
+    description: "Warm and gooey cinnamon rolls with icing.",
+    price: "$2.75",
+    rate: 4.6,
+    reviews: 60,
+  },
+  {
+    id: "7",
+    img: "./src/danish-pastry.jpg",
+    title: "Danish Pastry",
+    description: "Layers of flaky pastry with sweet fillings.",
+    price: "$3.25",
+    rate: 4.4,
+    reviews: 48,
+  },
+  {
+    id: "8",
+    img: "./src/chocolate-cake.jpg",
+    title: "Chocolate Cake",
+    description: "Rich and moist chocolate cake for chocolate lovers.",
+    price: "$5.00",
+    rate: 4.9,
+    reviews: 70,
+  },
+  {
+    id: "9",
+    img: "./src/sourdough-bread.jpg",
+    title: "Sourdough Bread",
+    description: "Artisanal sourdough bread with a chewy crust.",
+    price: "$3.50",
+    rate: 4.3,
+    reviews: 55,
+  },
+  {
+    id: "10",
+    img: "./src/blueberry-muffin.jpg",
+    title: "Blueberry Muffin",
+    description: "Moist and fruity muffins with blueberries.",
+    price: "$2.25",
+    rate: 4.7,
+    reviews: 52,
+  },
+  {
+    id: "11",
+    img: "./src/pie.jpg",
+    title: "Banana Pie",
+    description: "Moist and fruity muffins with blueberries.",
+    price: "$2.25",
+    rate: 4.7,
+    reviews: 52,
+  },
+  {
+    id: "12",
+    img: "./src/Red-Velvet-Cake.jpg",
+    title: "Blueberry Muffin",
+    description: "Moist and fruity muffins with blueberries.",
+    price: "$2.25",
+    rate: 4.7,
+    reviews: 52,
+  },
+];
 
-const bitems=card.bakeryItems;
+let cart = [];
+// console.log("Script loaded");
+const closebtn = document.querySelector("#close");
+const openbtn = document.querySelector(".opencart");
+const cartdisplay = document.querySelector(".viewcart_div");
+
+
+const bitems = bakeryItems;
+// console.log(bitems);
 
 const cardct = document.querySelector(".cards");
 const display = bitems.map((item, index) => {
-    return `
+  return `
     <div class="card">
 <div class="img">
 <img src="${item.img}" alt="">
@@ -14,13 +131,13 @@ const display = bitems.map((item, index) => {
 <p></p>
 <p>${item.price}</p>
 <div class="btn">
-<button id="btn" >Add to cart</button>
+<button onclick="addToCart(${index})" id="btn" >Add to cart</button>
 </div>
 </div>
 `
 })
 
-cardct.innerHTML=display.join("");
+cardct.innerHTML = display.join("");
 
 
 
@@ -33,26 +150,26 @@ function showSlides() {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+    slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
+  if (slideIndex > slides.length) { slideIndex = 1 }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
 $(document).ready(function () {
- 
+
   $('ul.navbar-nav > li')
-          .click(function (e) {
+    .click(function (e) {
       $('ul.navbar-nav > li')
-          .removeClass('active');
+        .removeClass('active');
       $(this).addClass('active');
-  });
+    });
 });
 //home page sliding section
 
@@ -61,12 +178,12 @@ $(document).ready(function () {
 let currentSlide = 0;
 
 function changeSlide(n) {
-    const slides = document.querySelector('.slides');
-    const totalSlides = document.querySelectorAll('.slide').length;
-    currentSlide = (currentSlide + n + totalSlides) % totalSlides;
-    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+  const slides = document.querySelector('.slides');
+  const totalSlides = document.querySelectorAll('.slide').length;
+  currentSlide = (currentSlide + n + totalSlides) % totalSlides;
+  slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
-window.changeSlide=changeSlide;
+window.changeSlide = changeSlide;
 
 
 
@@ -76,9 +193,9 @@ const testimonialsData = [
   {
     id: 1,
     name: "jane pit",
-    rating: 4, 
+    rating: 4,
     review: "This is a great place and a must-try for biscuits and cakes. The ambiance is cozy, and the staff is friendly.",
-    img: "./src/jane.jpg", 
+    img: "./src/jane.jpg",
   },
   {
     id: 2,
@@ -121,7 +238,7 @@ const testimonialsData = [
 
 const reviewdiv = document.querySelector(".slides");
 const viewreview = testimonialsData.map((item, index) => {
-    return `
+  return `
     <div class="slide">
     <div class="testimonial">
       <div class="revcontainer">
@@ -132,8 +249,8 @@ const viewreview = testimonialsData.map((item, index) => {
             </div>
             <div class="flexb_star">
               ${Array.from({ length: item.rating }, (_, index) => (
-                `<span key=${index} class="material-icons star">star</span>`
-              )).join('')}
+    `<span key=${index} class="material-icons star">star</span>`
+  )).join('')}
             </div>
           </div>
           <p id="name">${item.name}</p>
@@ -148,66 +265,88 @@ const viewreview = testimonialsData.map((item, index) => {
 reviewdiv.innerHTML = viewreview.join("");
 
 // contact page
-const inputs =document.querySelectorall(".contact-input");
+const inputs = document.querySelectorall(".contact-input");
 
 inputs.forEach((ipt) => {
-  ipt.addEventlistner("focus",()=>{
-  ipt.parentnode.classList.add("focous");
-  ipt.parentnode.classList.add("not-empty");
+  ipt.addEventlistner("focus", () => {
+    ipt.parentnode.classList.add("focous");
+    ipt.parentnode.classList.add("not-empty");
+  });
+  ipt.addEventlistner("blur", () => {
+    ipt.parentnode.classList.remove("focous");
+  })
 });
-ipt.addEventlistner("blur",()=>{
-  ipt.parentnode.classList.remove("focous");
-})
-});
 
 
-// // cart logic
+
+// Function to handle the "Add to Cart" button click
+
+function addToCart(index) {
+  // console.log(index);
+  const selectedItem = bakeryItems[index];
+  // Add the selectedItem to the cart array
+  cart.push(selectedItem);
+  updatenum()
+  // console.log(cart);
+  // Update the cart display
+  updateCartDisplay();
+}
 
 
-// const cardct = document.querySelector(".cards");
-// const cart = [];
+// Function to update the cart display
+function updateCartDisplay() {
+  const cardShopping = document.querySelector(".itemwraper");
+  const shop = cart.map((item, index) => {
+    return `
+    <div class="itemcov">
+      <div class="itemlit">
+        <p>${item.title}</p>
+        <p>${item.price}</p>
+      </div>
+      <div class="btnctn">
+        <button class="removeit" data-index="${index}">remove</button>
+      </div>
+    </div>
+    `;
+  });
 
-// // Function to handle the "Add to Cart" button click
-// function addToCart(index) {
-//     const selectedItem = bitems[index];
+  cardShopping.innerHTML = shop.join("");
 
-//     // Check if the item is already in the cart
-//     const existingItem = cart.find(item => item.title === selectedItem.title);
+  // Add click event listener to the "remove" buttons
+  const removeButtons = document.querySelectorAll(".removeit");
+  removeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const indexToRemove = parseInt(button.dataset.index, 10);
+      removeFromCart(indexToRemove);
+    });
+  });
+}
 
-//     if (existingItem) {
-//         // If the item is already in the cart, increase the quantity
-//         existingItem.quantity++;
-//     } else {
-//         // If the item is not in the cart, add it with a quantity of 1
-//         cart.push({ ...selectedItem, quantity: 1 });
-//     }
+// Function to remove item from the cart
+function removeFromCart(index) {
+  // Remove the item from the cart array based on the index
+  cart.splice(index, 1);
+  updateDataIndexAttributes();
+  updatenum()
+  // Update the cart display
+  updateCartDisplay();
+}
 
-//     // Update the cart display
-//     updateCartDisplay();
-// }
+function updateDataIndexAttributes() {
+  const removeButtons = document.querySelectorAll(".removeit");
+  removeButtons.forEach((button, index) => {
+    button.dataset.index = index;
+  });
+}
 
-// // Function to update the cart display
-// function updateCartDisplay() {
-//     // Add your logic here to update the cart display
-//     // For now, let's log the current cart array to the console
-//     console.log("Cart:", cart);
-// }
+function open_c() {
+  cartdisplay.style.display = "block";
+}
+function close_c() {
+  cartdisplay.style.display = "none";
+}
 
-// const display = bitems.map((item, index) => {
-//     return `
-//     <div class="card">
-//         <div class="img">
-//             <img src="${item.img}" alt="">
-//         </div>
-//         <p>${item.rate}<span>(${item.reviews})</span></p>
-//         <p>${item.title}</p>
-//         <p>${item.price}</p>
-//         <div class="btn">
-//             <button onclick="addToCart(${index})">Add to Cart</button>
-//         </div>
-//     </div>
-//     `;
-// });
-
-// cardct.innerHTML = display.join("");
-
+function updatenum() {
+  const cartno =document.querySelector(".num");
+  cartno.innerText=cart.length;
+}
