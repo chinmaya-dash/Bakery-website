@@ -307,7 +307,7 @@ console.log(total);
     <div class="itemcov">
       <div class="itemlit">
         <p>${item.title}</p>
-        <p>${item.price}</p>
+        <p><i class="uil uil-rupee-sign"></i> ${item.price}</p>
       </div>
       <div class="btnctn">
         <button class="removeit" data-index="${index}">remove</button>
