@@ -246,7 +246,7 @@ const viewreview = testimonialsData.map((item, index) => {
         <div class="showrSlide fade">
           <div class="cot">
             <div class="profilepic">
-              <img src="${item.img}" alt="invalid">
+              <img class="reimg" src="${item.img}" alt="invalid">
             </div>
             <div class="flexb_star">
               ${Array.from({ length: item.rating }, (_, index) => (

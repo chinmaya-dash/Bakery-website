@@ -207,13 +207,50 @@
 
   <!-- about section -->
   <section id="about">
-    <div id="header">
-      <h1>About us</h1>
+    <!-- root -->
+    <div class="aboutsc">
+      <!--  -->
+      <div class="firstcol">
+        <div class="aboutimg">
+          <div class="abimgcon">
+            <img src="./src/chef-01.jpg" alt="">
+          </div>
+        </div>
+        <div class="abouttext">
+          <h1 id="huigu">Lorem, ipsum.</h1>
+          <p id="abt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quaerat alias distinctio voluptatum!
+            Ducimus quidem illo nulla cum, quae vitae id qui sequi.</p>
+          <button class="button-62">learn more</button>
+        </div>
+      </div>
+      <!--  -->
+      <div class="secncol">
+
+        <div class="container_about">
+          <h3 id="nomui">01</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad nam itaque ex totam dignissimos? Ratione
+            cumque magni dolorum, repellat ea consequatur dolorem alias officia ex eos, a molestias beatae vero
+            similique. Dolore consectetur quibusdam impedit!</p>
+        </div>
+
+        <div class="container_about">
+          <h3 id="nomui">02</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad nam itaque ex totam dignissimos? Ratione
+            cumque magni dolorum, repellat ea consequatur dolorem alias officia ex eos, a molestias beatae vero
+            similique. Dolore consectetur quibusdam impedit!</p>
+        </div>
+
+        <div class="container_about">
+          <h3 id="nomui">03</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad nam itaque ex totam dignissimos? Ratione
+            cumque magni dolorum, repellat ea consequatur dolorem alias officia ex eos, a molestias beatae vero
+            similique. Dolore consectetur quibusdam impedit!</p>
+        </div>
+      </div>
+      <!--  -->
     </div>
-   
   </section>
 
-  <!-- about section -->
 
   <!-- menu section -->
   <section id="menu">
@@ -259,7 +296,7 @@
       <div class="left">
         <div class="form-wrapper">
           <div class="contact-heading">
-            <h2>Any questions or remarks? Just write us a message!</h2>
+            <h3>Any questions or remarks? Just write us a message!</h3>
             <!-- <p class="text">Reach us via:<a href="chinmayadash@gmail.com">xyz@gmail.com</a></p> -->
           </div>
           <form action="index.html" method="post" class="contact-form">
@@ -288,10 +325,12 @@
             </div>
             <button id="contactbtn" class="contactbtn">submit</button>
 
-            <label class="contactbtn">
-              <input type="file" name="attachment" style="display: none;">
-              Add Attachment
-          </label>
+            <button class="btnupload">
+              <span>
+                Add Attachment
+              </span>
+              <input type="file" name="attachment">
+            </button>
 
 
           </form>
@@ -304,6 +343,31 @@
       </div>
     </div>
 
+    <!-- <div>
+      <div class="">
+        <div class="layout-1">
+          <h3 class="u-align-center"> Any questions or remarks? Just write us a message!</h3>
+          <div class="u-form u-form-1">
+        
+              <div class="layout-2">
+                <label for="email" class="u-label">Email</label>
+                <input type="email" placeholder="Enter a valid email address" id="contactname" name="email" class="u-grey-10 u-input u-input-rectangle u-radius-50" required="" wfd-id="id1096">
+
+                <label for="name-bb9b" class="u-label">Name</label>
+                <input type="text" placeholder="Enter your Name" id="contactname" name="name" class="u-grey-10 u-input u-input-rectangle u-radius-50" required="" wfd-id="id1097">
+              </div>
+            
+                <button id="contactbtn" class="contactbtn">submit</button>
+              
+              </div>
+              <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+              <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+           
+          </div>
+        </div>
+      </div>
+    </div> -->
+
   </section>
 
   <!-- contactus section -->
@@ -311,23 +375,17 @@
 
 
   <!-- Footer -->
-
-<footer>
-    <div class="social-links">
-        <a href="https://www.facebook.com/your-facebook-page" target="_blank">
-            <img src="facebook-logo.png" alt="Facebook Logo">
-        </a>
-        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
-            <img src="linkedin-logo.png" alt="LinkedIn Logo">
-        </a>
-        <a href="https://www.yourwebsite.com" target="_blank">
-            Your Website
-        </a>
-        <a href="https://github.com/your-github-username" target="_blank">
-            GitHub
-        </a>
-    </div>
-</footer>
+  <footer class="bakerymanagementsystem">
+    <a href="#"><i class="facebook"></i></a>
+    <a href="#"><i class="pinterest-p"></i></a>
+    <a href="#"><i class="twitter"></i></a>
+    <a href="#"><i class="flickr"></i></a>
+    <a href="#"><i class="linkedin"></i></a>
+    <p class="w3-medium">
+      Powered by <a href="http://127.0.0.1:5500/Bakery-website/index.html" target="_blank">Chinmaya
+        Bakery</a>
+    </p>
+  </footer>
   <script src="main.js"></script>
   <!-- <-- review slide-->
 
