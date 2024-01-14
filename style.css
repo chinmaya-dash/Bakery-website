@@ -28,7 +28,7 @@ section {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    scroll-snap-align: inherit;
+    /* scroll-snap-align: inherit; */
     padding-top: 4rem;
 }
 
@@ -59,6 +59,9 @@ html {
 
 body {
     background: rgb(233, 210, 210);
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 nav {
@@ -71,11 +74,11 @@ nav {
     /* border: red solid 2px; */
     width: 100vw;
     padding: 1rem 0rem;
-    height: 2.2rem;
+    height: 3.2rem;
     background: rgba(247, 169, 44, 0.38);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.20);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border: 1px solid rgba(255, 255, 255, 0.18);
 
 }
@@ -104,8 +107,10 @@ nav {
 .num {
     background: rgb(136, 157, 128);
     height: fit-content;
-    padding: 0.6rem 1rem;
-    border-radius: 0.5rem;
+    /* width: 1rem; */
+    /* overflow: hidden; */
+    padding: 0.2rem 0.5rem;
+    border-radius: 50%;
     font-weight: 600;
     color: aliceblue;
 }
@@ -427,7 +432,7 @@ nav {
 }
 
 .revcontainer {
-    width: 30rem;
+    width: 40rem;
     height: fit-content;
     background: rgb(241, 183, 155);
     position: relative;
@@ -471,11 +476,11 @@ nav {
     width: 100%;
 }
 
-.revcontainer {
+/* .revcontainer {
     max-width: 1000px;
     position: relative;
     margin: auto;
-}
+} */
 
 
 
@@ -611,6 +616,7 @@ nav {
     margin: 50px auto;
     overflow: hidden;
     position: relative;
+
 }
 
 .slides {
@@ -627,6 +633,11 @@ nav {
     /* border: 1px solid #ccc; */
     border-radius: 5px;
     text-align: center;
+    /* border: red solid; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .slider-btn {
@@ -753,7 +764,7 @@ label {
     background-color: #a6ecfa;
 }
 
-.input-wrap label {}
+
 
 /* .input-wrap .icon{
     position: absolute;
@@ -1047,8 +1058,9 @@ header{
 
 /* shoping cart section */
 .opencart {
-    background: red;
+    background: transparent;
     padding: 0.5rem;
+    margin-right:4rem;
 }
 
 .viewcart_div {
@@ -1123,7 +1135,6 @@ header{
     padding-bottom: 0.3rem;
 }
 
-.buttonci {}
 
 .reimg {
     height: 100%;
@@ -1170,10 +1181,10 @@ header{
 
 .abimgcon {
     background: rgb(85, 85, 85);
-    width: 25rem;
-    height: 25rem;
+    width: 19rem;
+    height: 19rem;
     border-radius: 50%;
-    transform: translateX(10rem);
+    transform: translateX(6rem);
     overflow: hidden;
 }
 
@@ -1230,4 +1241,5 @@ header{
 }
 #about{
     background: #fdf6e4;
+    /* height: 100% !important; */
 }
